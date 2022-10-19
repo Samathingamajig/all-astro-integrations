@@ -1,6 +1,10 @@
 <script lang="ts">
-  let count = 0;
+  import { globalCountStore, incrementGlobalCount } from "./stores";
+  let personalCount = 0;
 </script>
 
 <h2>Svelte State</h2>
-<button on:click={() => count++}>Personal count {count}</button>
+<button on:click={() => personalCount++}>Personal count {personalCount}</button
+><button on:click={incrementGlobalCount}
+  >Global count {$globalCountStore}</button
+>

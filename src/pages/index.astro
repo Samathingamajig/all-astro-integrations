@@ -1,5 +1,4 @@
 ---
-import AlpineState from "../components/reactive/AlpineState.astro";
 import { AngularState } from "../components/reactive/AngularState/AngularState.component";
 import { PreactState } from "../components/reactive/PreactState";
 import { ReactState } from "../components/reactive/ReactState";
@@ -8,7 +7,6 @@ import SvelteState from "../components/reactive/SvelteState.svelte";
 import VueState from "../components/reactive/VueState.vue";
 ---
 
-<AlpineState />
 <AngularState client:load />
 <PreactState client:load />
 <ReactState client:load />

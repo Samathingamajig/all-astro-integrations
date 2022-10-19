@@ -1,13 +1,20 @@
 /** @jsxImportSource solid-js */
-
 import { createSignal } from "solid-js";
+import { useStore } from "@nanostores/solid";
+import { globalCountStore, incrementGlobalCount } from "./stores";
 
 export const SolidJSState = () => {
-  const [counter, setCounter] = createSignal(0);
+  const [personalCount, setPersonalCount] = createSignal(0);
+  const globalCount = useStore(globalCountStore);
   return (
     <>
       <h2>SolidJS State</h2>
-      <button onClick={() => setCounter((curr) => curr + 1)}>Personal count {counter()}</button>
+      <button onClick={() => setPersonalCount((curr) => curr + 1)}>
+        Personal count {personalCount()}
+      </button>
+      <button onClick={incrementGlobalCount}>
+        Global count {globalCount()}
+      </button>
     </>
   );
 };

@@ -12,19 +12,21 @@ specifiers:
   '@angular/platform-browser': ^14.2.6
   '@angular/platform-browser-dynamic': ^14.2.6
   '@angular/platform-server': ^14.2.6
-  '@astrojs/alpinejs': ^0.1.2
   '@astrojs/preact': ^1.2.0
   '@astrojs/react': ^1.2.0
   '@astrojs/solid-js': ^1.2.0
   '@astrojs/svelte': ^1.0.2
   '@astrojs/vue': ^1.1.0
   '@babel/core': ^7.19.3
-  '@types/alpinejs': ^3.7.0
+  '@nanostores/preact': ^0.3.1
+  '@nanostores/react': ^0.4.0
+  '@nanostores/solid': ^0.3.0
+  '@nanostores/vue': ^0.6.0
   '@types/react': ^18.0.21
   '@types/react-dom': ^18.0.6
-  alpinejs: ^3.10.4
   astro: 1.5.0
   lit: ^2.4.0
+  nanostores: ^0.7.0
   preact: ^10.11.1
   prettier: ^2.7.1
   prettier-plugin-astro: ^0.5.5
@@ -51,16 +53,18 @@ dependencies:
   '@angular/platform-browser': 14.2.6_5wzarqd3arhgc44duqecaxbeeq
   '@angular/platform-browser-dynamic': 14.2.6_674mqxjl43jlt7lejrsufwimue
   '@angular/platform-server': 14.2.6_225fngnvpplihzjrflljux4yli
-  '@astrojs/alpinejs': 0.1.2_yvhazkf3ea3h3kyyse3wsvp62e
   '@astrojs/preact': 1.2.0_preact@10.11.1
   '@astrojs/react': 1.2.0_biqbaboplfbrettd7655fr4n2y
   '@astrojs/solid-js': 1.2.0_o5do7oxr2hbtrv24zykqvegilq
   '@astrojs/svelte': 1.0.2_fyeeum33i6p2v4cis2fqmojgeq
   '@astrojs/vue': 1.1.0_63kncfv6x3id6ho26n4g7olwni
   '@babel/core': 7.19.3
-  '@types/alpinejs': 3.7.0
-  alpinejs: 3.10.4
+  '@nanostores/preact': 0.3.1_etpp7znnotz7ipubqcyrruq2cq
+  '@nanostores/react': 0.4.0_kumziggp74xxkphhh7wyh33hzm
+  '@nanostores/solid': 0.3.0_solid-js@1.5.7
+  '@nanostores/vue': 0.6.0_r627q4dwpmfpioilrlqhfzrl3q
   lit: 2.4.0
+  nanostores: 0.7.0
   preact: 10.11.1
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
@@ -420,16 +424,6 @@ packages:
 
   /@assemblyscript/loader/0.10.1:
     resolution: {integrity: sha512-H71nDOOL8Y7kWRLqf6Sums+01Q5msqBW2KhDUTemh1tvY04eSkSXrK0uj/4mmY0Xr16/3zyZmsrxN7CKuRbNRg==}
-    dev: false
-
-  /@astrojs/alpinejs/0.1.2_yvhazkf3ea3h3kyyse3wsvp62e:
-    resolution: {integrity: sha512-pcy+r7TTeFMbdZpRUuOYbf5L3ccFp107gH9j0Hdl5z8hmrSw9918pxkK1tiAcbwrQKxifv7nM5V5FJKu7SoJrw==}
-    peerDependencies:
-      '@types/alpinejs': ^3.0.0
-      alpinejs: ^3.0.0
-    dependencies:
-      '@types/alpinejs': 3.7.0
-      alpinejs: 3.10.4
     dev: false
 
   /@astrojs/compiler/0.23.5:
@@ -2161,6 +2155,55 @@ packages:
     resolution: {integrity: sha512-4/RWEeXDO6bocPONheFe6gX/oQdP/bEpv0oL4HqjPP5DCenBSt0mHgahppY49N0CpsaqffdwPq+TlX9CYOq2Dw==}
     dev: true
 
+  /@nanostores/preact/0.3.1_etpp7znnotz7ipubqcyrruq2cq:
+    resolution: {integrity: sha512-D5lC1tNhwlVURCFJUTlnRkQ3LRNt6Sc2XHByBwgHPaKLBUPJxAaNAL7kz2dAEhge1fk9dNXAexCdepwiIFodOQ==}
+    engines: {node: ^14.0.0 || ^16.0.0 || >=18.0.0}
+    peerDependencies:
+      nanostores: ^0.7.0
+      preact: '>=10.0.0'
+    dependencies:
+      nanostores: 0.7.0
+      preact: 10.11.1
+    dev: false
+
+  /@nanostores/react/0.4.0_kumziggp74xxkphhh7wyh33hzm:
+    resolution: {integrity: sha512-u7Y3s1B4hwsBxpIxClx0F/Q7TF1AsCU/F7Tt3n+tWeCebQ0cs2spthmskJY689XIMTRJXfBZF83kJDaDZeavVA==}
+    engines: {node: ^14.0.0 || ^16.0.0 || >=18.0.0}
+    peerDependencies:
+      nanostores: ^0.7.0
+      react: '>=18.0.0'
+      react-dom: '>=18.0.0'
+    dependencies:
+      nanostores: 0.7.0
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+      use-sync-external-store: 1.2.0_react@18.2.0
+    dev: false
+
+  /@nanostores/solid/0.3.0_solid-js@1.5.7:
+    resolution: {integrity: sha512-OE5oKS42lJ+ahHjINgRxI/1Jl76VQy6i8fvAfdYE4UySMFXMEB69Qh8e4L7TObRzxIVl2PeoMacHM10PydBV9w==}
+    peerDependencies:
+      solid-js: '>=1.4.0'
+    dependencies:
+      nanostores: 0.7.0
+      solid-js: 1.5.7
+    dev: false
+
+  /@nanostores/vue/0.6.0_r627q4dwpmfpioilrlqhfzrl3q:
+    resolution: {integrity: sha512-Co53bCDAA2hkBqpeYN975kchX/cTHMdS9qt6inqPGm8QAoB+wCoecxjmde8GSo/Arc6/JmQC5AFJGALYz0QMhw==}
+    engines: {node: ^14.0.0 || ^16.0.0 || >=18.0.0}
+    peerDependencies:
+      '@vue/devtools-api': '>=6.1.4'
+      nanostores: '>=0.6.0'
+      vue: '>=3.2.30'
+    peerDependenciesMeta:
+      '@vue/devtools-api':
+        optional: true
+    dependencies:
+      nanostores: 0.7.0
+      vue: 3.2.41
+    dev: false
+
   /@ngtools/webpack/14.2.6_rfo5qfr7a7rpa7btd2wqtzc3x4:
     resolution: {integrity: sha512-HdfoHLGPzyP135BOlvTQcpeWisVfiH0u40YNTBVK3QAsrLnY17e2QG5BWBOrVYipRu1975cZtTC9rPjcCY8aLQ==}
     engines: {node: ^14.15.0 || >=16.10.0, npm: ^6.11.0 || ^7.5.6 || >=8.0.0, yarn: '>= 1.13.0'}
@@ -2289,12 +2332,6 @@ packages:
     dependencies:
       '@types/estree': 1.0.0
     dev: true
-
-  /@types/alpinejs/3.7.0:
-    resolution: {integrity: sha512-iMvJwgJHYFUlMOixKF68BmMQZbnxVA/erh1blbfhY8Z6u6oleEJViz8bye58roLOp8jyBNOsXtobyq7zR/7A2g==}
-    dependencies:
-      '@vue/reactivity': 3.2.41
-    dev: false
 
   /@types/babel__core/7.1.19:
     resolution: {integrity: sha512-WEOTgRsbYkvA/KCsDwVEGkd7WAr1e3g31VHQ8zy5gul/V1qKullU/BU5I68X5v7V3GnB9eotmom4v5a5gjxorw==}
@@ -2656,12 +2693,6 @@ packages:
       magic-string: 0.25.9
     dev: false
 
-  /@vue/reactivity/3.1.5:
-    resolution: {integrity: sha512-1tdfLmNjWG6t/CsPldh+foumYFo3cpyCHgBYQ34ylaMsJ+SNHQ1kApMIa8jN+i593zQuaw3AdWH0nJTARzCFhg==}
-    dependencies:
-      '@vue/shared': 3.1.5
-    dev: false
-
   /@vue/reactivity/3.2.41:
     resolution: {integrity: sha512-9JvCnlj8uc5xRiQGZ28MKGjuCoPhhTwcoAdv3o31+cfGgonwdPNuvqAXLhlzu4zwqavFEG5tvaoINQEfxz+l6g==}
     dependencies:
@@ -2691,10 +2722,6 @@ packages:
       '@vue/compiler-ssr': 3.2.41
       '@vue/shared': 3.2.41
       vue: 3.2.41
-    dev: false
-
-  /@vue/shared/3.1.5:
-    resolution: {integrity: sha512-oJ4F3TnvpXaQwZJNF3ZK+kLPHKarDmJjJ6jyzVNDKH9md1dptjC7lWR//jrGuLdek/U6iltWxqAnYOu8gCiOvA==}
     dev: false
 
   /@vue/shared/3.2.41:
@@ -2915,12 +2942,6 @@ packages:
       json-schema-traverse: 1.0.0
       require-from-string: 2.0.2
       uri-js: 4.4.1
-    dev: false
-
-  /alpinejs/3.10.4:
-    resolution: {integrity: sha512-AC6Xchlb/xURO7F93OSMItooClpzGNZRM5+rDa6/3Y20mPxQs1TQ/wfiwiH4mtcVt8yTxdkOW5dOl8CBCK095A==}
-    dependencies:
-      '@vue/reactivity': 3.1.5
     dev: false
 
   /ansi-align/3.0.1:
@@ -6565,6 +6586,11 @@ packages:
     engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
     hasBin: true
 
+  /nanostores/0.7.0:
+    resolution: {integrity: sha512-y+ma9MVXuPzXKEXaRYW/iL/xG/HtMwB8fmFcMfUqt5fCNR/na2kDubbZGV4furUMTgmxfySJs0cQjORWhaPDyA==}
+    engines: {node: ^14.0.0 || ^16.0.0 || >=18.0.0}
+    dev: false
+
   /needle/3.1.0:
     resolution: {integrity: sha512-gCE9weDhjVGCRqS8dwDR/D3GTAeyXLXuqp7I8EzH6DllZGXSUyxuqqLh+YX9rMAWaaTFyVAg6rHGL25dqvczKw==}
     engines: {node: '>= 4.4.x'}
@@ -8870,6 +8896,14 @@ packages:
     resolution: {integrity: sha512-7rKUyy33Q1yc98pQ1DAmLtwX109F7TIfWlW1Ydo8Wl1ii1SeHieeh0HHfPeL2fMXK6z0s8ecKs9frCuLJvndBg==}
     dependencies:
       punycode: 2.1.1
+    dev: false
+
+  /use-sync-external-store/1.2.0_react@18.2.0:
+    resolution: {integrity: sha512-eEgnFxGQ1Ife9bzYs6VLi8/4X6CObHMw9Qr9tPY43iKwsPw8xE8+EFsf/2cFZ5S3esXgpWgtSCtLNS41F+sKPA==}
+    peerDependencies:
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0
+    dependencies:
+      react: 18.2.0
     dev: false
 
   /util-deprecate/1.0.2:
